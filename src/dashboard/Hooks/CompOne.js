@@ -2,8 +2,9 @@ import React, { createContext, useEffect, useState } from 'react'
 import FormComp from './FormComp'
 import HookInterval from './HookInterval'
 import UsersData from './UsersData'
+import Counter from './useReducerComp/Counter'
 
-export const userContext = createContext()
+export const UserContext = createContext()
 
 const CompOne = () => {
 
@@ -41,9 +42,11 @@ const CompOne = () => {
             <hr/>
             <HookInterval/>
             <hr/>
-            <userContext.Provider userName={"AJinkya"}>
+            <UserContext.Provider value={"AJinkya"}>
             <UsersData/>
-            </userContext.Provider>
+            </UserContext.Provider>
+            <hrr/>
+            <Counter/>
         </div>
     )
 }

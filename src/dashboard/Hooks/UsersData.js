@@ -1,18 +1,13 @@
 import React, { useContext } from 'react'
-import { userContext } from './CompOne'
+import { UserContext } from './CompOne'
 
 const UsersData = ()=> {
 
+  const user = useContext(UserContext)
+  console.log(user)
+
   return (
-    <div>UsersData: 
-      <userContext.Consumer>
-        {
-          userName =>{
-            
-          }
-        }
-      </userContext.Consumer>
-    </div>
+    <div>UsersData: {user}</div>
   )
 }
 
