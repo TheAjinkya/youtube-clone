@@ -3,6 +3,9 @@ import FormComp from './FormComp'
 import HookInterval from './HookInterval'
 import UsersData from './UsersData'
 import Counter from './useReducerComp/Counter'
+import UsersDataComponent from './useReducerComp/UsersDataComponent'
+import FirstCounter from './Counter/FirstCounter'
+import SecondCounter from './Counter/SecondCounter'
 
 export const UserContext = createContext()
 
@@ -47,6 +50,11 @@ const CompOne = () => {
             </UserContext.Provider>
             <hrr/>
             <Counter/>
+            <hr/>
+            <UsersDataComponent/>
+            <hr/>
+            <FirstCounter/>
+            <SecondCounter/>
         </div>
     )
 }

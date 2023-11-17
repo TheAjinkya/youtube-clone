@@ -2,15 +2,21 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Box } from '@mui/material'
-import ComponentOne from './dashboard/ClassComp/ComponentOne';
-import CompOne from './dashboard/Hooks/CompOne';
-// import { VideoDetail, Navbar, ChannelDetail, SearchFeed, Feed } from './components/index'
+import { VideoDetail, Navbar, ChannelDetail, SearchFeed, Feed } from './components'
 
 
-function App() {
-  return (<>
-    <CompOne/>
-  </>);
-}
+const App = () => (
+  <BrowserRouter>
+    <Box sx={{ backgroundColor: '#000' }}>
+      <Navbar />
+      <Routes>
+        <Route exact path='/' element={<Feed />} />
+        <Route path='/video/:id' element={<VideoDetail />} />
+        <Route path='/channel/:id' element={<ChannelDetail />} />
+        <Route path='/search/:searchTerm' element={<SearchFeed />} />
+      </Routes>
+    </Box>
+  </BrowserRouter>
+);
 
 export default App;
