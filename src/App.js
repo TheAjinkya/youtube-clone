@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Box } from '@mui/material'
-import { VideoDetail, Navbar, ChannelDetail, SearchFeed, Feed } from './components'
+import { VideoDetail, Navbar, ChannelDetail, SearchFeed, Feed } from './components/index'
 
 
 const App = () => (
